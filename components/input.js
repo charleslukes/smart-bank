@@ -26,7 +26,7 @@ const Input = (props) => {
 
   const movePlaceholderTextUp = () => {
     Animated.timing(movePlaceholderText, {
-      toValue: -10,
+      toValue: -13,
       duration: 100,
       easing: Easing.ease,
       useNativeDriver: false,
@@ -57,6 +57,7 @@ const Input = (props) => {
       fontSize: 15,
       paddingTop: 5,
       paddingLeft: 5,
+      fontFamily: 'Hind-Medium',
     },
     placeholderTextStyle: {
       position: 'absolute',
@@ -97,7 +98,14 @@ const Input = (props) => {
                 left: 30,
               }
         }>
-        <Text style={{fontSize: 17, color: '#7b7b7b'}}>{inputPlaceholder}</Text>
+        <Text
+          style={{
+            fontSize: 17,
+            color: '#7b7b7b',
+            fontFamily: 'Poppins-Medium',
+          }}>
+          {inputPlaceholder}
+        </Text>
       </Animated.View>
       {error && error.message && (
         <Text style={styles.error}>{error && error.message}</Text>
