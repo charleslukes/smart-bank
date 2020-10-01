@@ -7,12 +7,12 @@
  */
 
 import React from 'react';
-import WelcomeView from './lib/welcome';
+import SignIn from './lib/signin';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <WelcomeView />
+      <SignIn />
     </>
   );
 };
