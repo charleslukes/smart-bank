@@ -2,7 +2,15 @@ import React from 'react';
 import {View, TouchableHighlight, StyleSheet, Text} from 'react-native';
 
 const SmbButton = (props) => {
-  const {btnWidth, btnColor, btnTitle, btnBgColor} = props;
+  const {
+    btnWidth,
+    btnColor,
+    btnTitle,
+    btnBgColor,
+    btnContainerProps,
+    btnTextStyleProps,
+    ...btnProps
+  } = props;
   const styles = StyleSheet.create({
     btnContainer: {
       marginTop: 30,
@@ -21,9 +29,11 @@ const SmbButton = (props) => {
   });
 
   return (
-    <TouchableHighlight onPress={props.onBtnPressed} underlayColor="white">
-      <View style={styles.btnContainer}>
-        <Text style={styles.buttonText}>{btnTitle ? btnTitle : 'Sign in'}</Text>
+    <TouchableHighlight {...btnProps} underlayColor="white">
+      <View style={[styles.btnContainer, btnContainerProps]}>
+        <Text style={[styles.buttonText, btnTextStyleProps]}>
+          {btnTitle ? btnTitle : 'Sign in'}
+        </Text>
       </View>
     </TouchableHighlight>
   );
