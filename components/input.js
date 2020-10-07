@@ -63,7 +63,7 @@ const Input = (props) => {
       position: 'absolute',
       top: 13,
       left: 45,
-      backgroundColor: '#eee',
+      backgroundColor: '#fff',
     },
   });
 
